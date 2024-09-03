@@ -10,9 +10,9 @@ function createTransport(options) {
       options.source || "",
       options.filename || "log"
     )}-%DATE%.log`,
-    datePattern: options.datePattern || "YYYY-MM-DD",
+    fileDatePattern: options.fileDatePattern || "YYYY-MM-DD",
     zippedArchive: options.zippedArchive || false,
-    maxSize: options.maxSize || null,
+    maxLogFileSize: options.maxLogFileSize || null,
     maxFiles: options.maxFiles || "14d",
     level: options.level,
     format: format.combine(

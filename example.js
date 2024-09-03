@@ -1,8 +1,12 @@
-const setupLogger = require("./index.js");
+const setupLogger = require("./logger.js");
 
 const options = {
   logDirectory: "logs",
-  timestampFormat: "YYYY-MM-DD HH:mm:ss",
+  timestampFormat: "HH:mm:ss",
+  fileDatePattern: "YYYY-MM-DD",
+  zippedArchive: false,
+  maxLogFileSize: null,
+  maxFiles: "14d",
   addConsoleInNonProduction: true,
   transports: [
     { filename: "combined", level: "silly", source: "backend" },
@@ -14,5 +18,9 @@ const options = {
 
 const logger = setupLogger(options);
 
-logger.log({ level: "info", message: "Hello world!", source: "backend" });
+logger.log({
+  level: "info",
+  message: "Hello world!",
+  source: "backend",
+});
 logger.log({ level: "error", message: "Hello error!", source: "frontend" });
