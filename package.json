@@ -2,7 +2,7 @@
   "name": "dera-logger",
   "version": "1.0.0",
   "description": "Logger by Dera Technology",
-  "main": "index.js",
+  "main": "logger.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,4 +1,4 @@
-const setupLogger = require("./logger.js");
+const setupLogger = require("dera-logger");
 
 const options = {
   logDirectory: "logs",
