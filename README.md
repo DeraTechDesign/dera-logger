@@ -7,7 +7,7 @@ A flexible and configurable logging package for Node.js applications, built with
 Install the package using npm:
 
 ```bash
-npm install your-logger-package-name
+npm install dera-logger
 ```
 
 ## Configuration
@@ -28,7 +28,7 @@ maxFiles: How long to keep log files for (default: 14d).
 
 ## Usage
 
-const setupLogger = require('your-logger-package-name');
+const setupLogger = require('dera-logger');
 
 const options = {
 logDirectory: "logs",
