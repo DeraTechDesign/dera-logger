@@ -48,10 +48,7 @@ transports: [
 
 const logger = setupLogger(options);
 
-logger.log({
-level: 'info',
-message: 'This is a test log message!',
-source: 'backend'
-});
+logger.error("An error occurred", "backend");
+logger.info("A new request has been received", "frontend");
 
 ## License

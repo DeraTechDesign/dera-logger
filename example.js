@@ -18,9 +18,5 @@ const options = {
 
 const logger = setupLogger(options);
 
-logger.log({
-  level: "info",
-  message: "Hello world!",
-  source: "backend",
-});
-logger.log({ level: "error", message: "Hello error!", source: "frontend" });
+logger.error("An error occurred", "backend");
+logger.info("A new request has been received", "frontend");

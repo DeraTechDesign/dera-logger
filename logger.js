@@ -39,7 +39,20 @@ function setupLogger(options) {
     logger.add(new transports.Console());
   }
 
-  return logger;
+  // Helper to handle custom methods like logger.error(message, source)
+  const customLogger = {};
+
+  ["error", "warn", "info", "verbose", "debug", "silly"].forEach((level) => {
+    customLogger[level] = (message, source) => {
+      logger.log({
+        level,
+        message,
+        source,
+      });
+    };
+  });
+
+  return customLogger;
 }
 
 module.exports = setupLogger;
