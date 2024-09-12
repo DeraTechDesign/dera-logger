@@ -51,4 +51,6 @@ const logger = setupLogger(options);
 logger.error("An error occurred", "backend");
 logger.info("A new request has been received", "frontend");
 
+// Source is optional, you may not include both in transports of options and on logger.
+
 ## License
